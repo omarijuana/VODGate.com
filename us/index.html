@@ -8,6 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="alternate" hreflang="en-US" href="https://vodgate.com/us/" />
+  <link rel="alternate" hreflang="en-GB" href="https://vodgate.com/uk/" />
+  <link rel="alternate" hreflang="fr" href="https://vodgate.com/fr/" />
+  <link rel="alternate" hreflang="de" href="https://vodgate.com/de/" />
+  <link rel="alternate" hreflang="es" href="https://vodgate.com/es/" />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
@@ -30,6 +35,16 @@
         <a href="#how-it-works">How it works</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
+        <div class="nav-country" data-country-menu>
+          <button class="nav-country-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="country-menu" data-country-toggle>Countries</button>
+          <div class="country-dropdown" id="country-menu" role="menu" aria-label="Country and language selector">
+            <a href="/us/" role="menuitem" hreflang="en-US">🇺🇸 USA</a>
+            <a href="/uk/" role="menuitem" hreflang="en-GB">🇬🇧 UK</a>
+            <a href="/fr/" role="menuitem" hreflang="fr">🇫🇷 France</a>
+            <a href="/de/" role="menuitem" hreflang="de">🇩🇪 Germany</a>
+            <a href="/es/" role="menuitem" hreflang="es">🇪🇸 Spain</a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
