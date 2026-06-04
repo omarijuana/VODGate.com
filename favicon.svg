@@ -1,11 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="VODGate VG favicon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="VODGate VG favicon">
   <defs>
-    <linearGradient id="vodgate-red" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+    <linearGradient id="vodgate-brand-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#e50914" />
       <stop offset="1" stop-color="#ff4b55" />
     </linearGradient>
+    <filter id="vodgate-brand-shadow" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#e50914" flood-opacity="0.35" />
+    </filter>
   </defs>
-  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#vodgate-red)" />
-  <path fill="#ffffff" d="M9.5 17h7.5l5.2 23.8L28.2 17h7.3l-9.3 32h-7.4L9.5 17Z" />
-  <path fill="#ffffff" fill-rule="evenodd" d="M45 17.2c-8.6 0-15 6.7-15 15.8S36.4 49 45.2 49c5 0 8.7-1.9 10.8-4.2V34H43v6.5h6.9v1.8c-1 .5-2.4.9-4.3.9-4.9 0-8.3-4.1-8.3-10.2 0-5.9 3.2-9.9 8-9.9 2.9 0 4.9 1.1 6.6 3.2l4.7-4.7c-2.8-3-6.4-4.4-11.6-4.4Z" />
+  <rect width="40" height="40" rx="14.4" fill="url(#vodgate-brand-gradient)" filter="url(#vodgate-brand-shadow)" />
+  <text x="20" y="20" fill="#ffffff" dominant-baseline="central" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="800" letter-spacing="-0.6" text-anchor="middle">VG</text>
 </svg>
