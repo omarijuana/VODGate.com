@@ -29,32 +29,21 @@ const alternateLinks = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
   <title>{title}</title>
-  <!-- VODGATE SEO START -->
   <link rel="canonical" href={canonicalUrl} />
-  <!-- VODGATE SEO END -->
-  <!-- VODGATE FAVICON START -->
   <link rel="icon" type="image/svg+xml" href="/Assets/Images/favicon.svg">
-  <!-- VODGATE FAVICON END -->
-  <!-- VODGATE HREFLANG START -->
   {alternateLinks.map((link) => (
     <link rel="alternate" hreflang={link.hreflang} href={link.href} />
   ))}
-  <!-- VODGATE HREFLANG END -->
-  <!-- VODGATE OPEN GRAPH START -->
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalUrl} />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="VODGate" />
   <meta property="og:image" content={socialImageUrl} />
-  <!-- VODGATE OPEN GRAPH END -->
-  <!-- VODGATE TWITTER CARD START -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={socialImageUrl} />
-  <!-- VODGATE TWITTER CARD END -->
-  <!-- VODGATE STRUCTURED DATA START -->
   <script type="application/ld+json" is:inline>
   {
     "@context": "https://schema.org",
@@ -72,7 +61,6 @@ const alternateLinks = [
     ]
   }
   </script>
-  <!-- VODGATE STRUCTURED DATA END -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />

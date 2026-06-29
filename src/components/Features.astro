@@ -1,0 +1,51 @@
+---
+import FeatureCard from './FeatureCard.astro';
+
+const features = [
+  {
+    icon: '⚡',
+    title: 'Fast activation',
+    description: 'Choose a plan, message us, and receive activation details without complicated checkout steps.',
+  },
+  {
+    icon: '📺',
+    title: 'HD / Full HD / 4K ready',
+    description: 'Enjoy smooth entertainment quality when your device and internet connection support it.',
+  },
+  {
+    icon: '🧩',
+    title: 'Popular device support',
+    description: 'Works on Smart TV, Android Box, Fire Stick, iPhone, Android, PC, and other compatible apps.',
+  },
+  {
+    icon: '💬',
+    title: 'WhatsApp support',
+    description: 'Get direct help before ordering and during setup through simple WhatsApp communication.',
+  },
+  {
+    icon: '🔒',
+    title: 'Secure process',
+    description: 'No online payment is required on the website; plan requests are handled personally.',
+  },
+  {
+    icon: '🛠️',
+    title: 'Simple setup',
+    description: 'Receive straightforward setup instructions tailored to your preferred compatible device.',
+  },
+];
+---
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow">Features</p>
+      <h2>Premium access, simple setup</h2>
+      <p>Everything you need to get started quickly with clear guidance and responsive WhatsApp support.</p>
+    </div>
+
+    <div class="features-grid">
+      {features.map((feature) => (
+        <FeatureCard icon={feature.icon} title={feature.title} description={feature.description} />
+      ))}
+    </div>
+  </div>
+</section>

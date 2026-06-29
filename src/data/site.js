@@ -1,0 +1,15 @@
+export const site = {
+  siteUrl: 'https://vodgate.com',
+  brandName: 'VODGate',
+  brandMark: 'VG',
+  defaultTitle: 'VODGate | Premium IPTV & VOD Access',
+  defaultDescription: 'VODGate is a premium Live TV & VOD entertainment service with fast activation, WhatsApp support, and compatibility with popular devices.',
+  defaultOgImage: '/Assets/Images/social-preview.svg',
+  favicon: '/Assets/Images/favicon.svg',
+  stylesheet: '/Assets/CSS/style.css',
+  script: '/Assets/JS/script.js',
+  whatsappNumber: '212642197277',
+  whatsappOrderText: 'Hello VODGate, I want to order an IPTV plan',
+  whatsappOrderUrl: 'https://wa.me/212642197277?text=Hello%20VODGate%2C%20I%20want%20to%20order%20an%20IPTV%20plan',
+  contactEmail: 'hello@vodgate.com',
+};

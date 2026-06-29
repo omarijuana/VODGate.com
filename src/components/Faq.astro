@@ -1,0 +1,44 @@
+---
+import FaqItem from './FaqItem.astro';
+
+const faqs = [
+  {
+    question: 'Which devices are compatible?',
+    answer: 'VODGate works with many popular devices, including Smart TV, Android Box, Fire Stick, iPhone, Android, and PC when using compatible apps.',
+  },
+  {
+    question: 'How fast is activation?',
+    answer: 'Activation is typically handled quickly after you contact us on WhatsApp and provide the required plan and device details.',
+  },
+  {
+    question: 'Do you offer a trial?',
+    answer: 'Trial availability may vary. Contact us on WhatsApp and we will let you know the current options.',
+  },
+  {
+    question: 'How do I get support?',
+    answer: 'Support is provided through WhatsApp for setup questions, compatible device guidance, and general service help.',
+  },
+  {
+    question: 'What internet speed do I need?',
+    answer: 'A stable broadband connection is recommended. Higher-quality streams such as Full HD or 4K require faster and more stable internet.',
+  },
+  {
+    question: 'Is setup difficult?',
+    answer: 'No. We provide clear setup instructions for your compatible device so you can start watching as smoothly as possible.',
+  },
+];
+---
+<section class="section faq-section" id="faq">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2>Common questions</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      {faqs.map((faq) => (
+        <FaqItem question={faq.question} answer={faq.answer} />
+      ))}
+    </div>
+  </div>
+</section>

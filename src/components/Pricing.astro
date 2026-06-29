@@ -1,0 +1,59 @@
+---
+import PricingCard from './PricingCard.astro';
+
+const plans = [
+  {
+    title: '1 Month Plan',
+    label: 'Great for trying the service',
+    items: [
+      'Live TV & VOD entertainment service',
+      'HD / Full HD / 4K ready',
+      'Compatible device setup help',
+      'WhatsApp support included',
+    ],
+  },
+  {
+    title: '3 Months Plan',
+    label: 'Balanced access and value',
+    badge: 'Popular',
+    featured: true,
+    items: [
+      'Live TV & VOD entertainment service',
+      'HD / Full HD / 4K ready',
+      'Works with popular devices',
+      'Priority WhatsApp setup guidance',
+    ],
+  },
+  {
+    title: '12 Months Plan',
+    label: 'Best for long-term access',
+    items: [
+      'Live TV & VOD entertainment service',
+      'HD / Full HD / 4K ready',
+      'Multi-device compatibility guidance',
+      'Ongoing WhatsApp support',
+    ],
+  },
+];
+---
+<section class="section pricing-section" id="pricing">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow">Plans</p>
+      <h2>Choose your VODGate plan</h2>
+      <p>Flexible IPTV &amp; VOD access plans designed for quick WhatsApp ordering and easy activation.</p>
+    </div>
+
+    <div class="pricing-grid">
+      {plans.map((plan) => (
+        <PricingCard
+          title={plan.title}
+          label={plan.label}
+          items={plan.items}
+          featured={plan.featured}
+          badge={plan.badge}
+        />
+      ))}
+    </div>
+  </div>
+</section>

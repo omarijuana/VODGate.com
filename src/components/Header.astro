@@ -1,0 +1,26 @@
+---
+import MarketSwitcher from './MarketSwitcher.astro';
+---
+<header class="site-header" data-header>
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="VODGate home">
+        <span class="brand-mark">VG</span>
+        <span>VODGate</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" data-nav-menu>
+        <a href="#features">Features</a>
+        <a href="#pricing">Plans</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <MarketSwitcher />
+      </div>
+    </nav>
+  </header>

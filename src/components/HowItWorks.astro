@@ -1,0 +1,40 @@
+---
+import StepCard from './StepCard.astro';
+
+const steps = [
+  {
+    number: '01',
+    title: 'Choose a plan',
+    description: 'Select the duration that matches your needs.',
+  },
+  {
+    number: '02',
+    title: 'Contact us on WhatsApp',
+    description: 'Send your order request and device details.',
+  },
+  {
+    number: '03',
+    title: 'Receive setup instructions',
+    description: 'We guide you through setup for compatible devices.',
+  },
+  {
+    number: '04',
+    title: 'Start watching',
+    description: 'Enjoy your Live TV & VOD entertainment access.',
+  },
+];
+---
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow">How it works</p>
+      <h2>Start in four simple steps</h2>
+    </div>
+
+    <div class="steps-grid">
+      {steps.map((step) => (
+        <StepCard number={step.number} title={step.title} description={step.description} />
+      ))}
+    </div>
+  </div>
+</section>
