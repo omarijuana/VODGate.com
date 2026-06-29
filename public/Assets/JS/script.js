@@ -9,7 +9,7 @@ let countryMenuCloseTimer;
 let isCountryMenuPinned = false;
 
 const getHeroLocale = () => {
-  const localeMatch = window.location.pathname.match(/\/Languages\/(us|uk|fr|es|ar)(?:\/|index\.html)?$/);
+  const localeMatch = window.location.pathname.match(/^\/(us|uk|fr|es|ar)(?:\/|$)/);
   return localeMatch?.[1] || 'us';
 };
 

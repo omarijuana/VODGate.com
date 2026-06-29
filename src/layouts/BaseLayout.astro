@@ -1,0 +1,85 @@
+---
+const siteUrl = 'https://vodgate.com';
+const defaultTitle = 'VODGate | Premium IPTV & VOD Access';
+const defaultDescription = 'VODGate is a premium Live TV & VOD entertainment service with fast activation, WhatsApp support, and compatibility with popular devices.';
+
+const {
+  lang = 'en',
+  title = defaultTitle,
+  description = defaultDescription,
+  canonicalPath = '/',
+} = Astro.props;
+
+const canonicalUrl = new URL(canonicalPath, siteUrl).href;
+const socialImageUrl = `${siteUrl}/Assets/Images/social-preview.svg`;
+
+const alternateLinks = [
+  { hreflang: 'x-default', href: `${siteUrl}/` },
+  { hreflang: 'en-us', href: `${siteUrl}/us/` },
+  { hreflang: 'en-gb', href: `${siteUrl}/uk/` },
+  { hreflang: 'es-es', href: `${siteUrl}/es/` },
+  { hreflang: 'fr-fr', href: `${siteUrl}/fr/` },
+  { hreflang: 'ar', href: `${siteUrl}/ar/` },
+];
+---
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+  <!-- VODGATE SEO START -->
+  <link rel="canonical" href={canonicalUrl} />
+  <!-- VODGATE SEO END -->
+  <!-- VODGATE FAVICON START -->
+  <link rel="icon" type="image/svg+xml" href="/Assets/Images/favicon.svg">
+  <!-- VODGATE FAVICON END -->
+  <!-- VODGATE HREFLANG START -->
+  {alternateLinks.map((link) => (
+    <link rel="alternate" hreflang={link.hreflang} href={link.href} />
+  ))}
+  <!-- VODGATE HREFLANG END -->
+  <!-- VODGATE OPEN GRAPH START -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="VODGate" />
+  <meta property="og:image" content={socialImageUrl} />
+  <!-- VODGATE OPEN GRAPH END -->
+  <!-- VODGATE TWITTER CARD START -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={socialImageUrl} />
+  <!-- VODGATE TWITTER CARD END -->
+  <!-- VODGATE STRUCTURED DATA START -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "VODGate",
+        "url": "https://vodgate.com"
+      },
+      {
+        "@type": "WebSite",
+        "name": "VODGate",
+        "url": "https://vodgate.com"
+      }
+    ]
+  }
+  </script>
+  <!-- VODGATE STRUCTURED DATA END -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Assets/CSS/style.css" />
+</head>
+<body>
+  <slot />
+  <script is:inline src="/Assets/JS/script.js"></script>
+</body>
+</html>
