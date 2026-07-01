@@ -1,7 +1,6 @@
 ---
-const { title, label, items, featured = false, badge } = Astro.props;
+const { title, label, items, featured = false, badge, actionLabel, actionHref } = Astro.props;
 const className = featured ? 'price-card featured reveal' : 'price-card reveal';
-const orderUrl = 'https://wa.me/212642197277?text=Hello%20VODGate%2C%20I%20want%20to%20order%20an%20IPTV%20plan';
 ---
 <article class={className}>
   {badge && <span class="badge">{badge}</span>}
@@ -12,5 +11,5 @@ const orderUrl = 'https://wa.me/212642197277?text=Hello%20VODGate%2C%20I%20want%
       <li>{item}</li>
     ))}
   </ul>
-  <a class="btn btn-primary" href={orderUrl} target="_blank" rel="noopener">Order on WhatsApp</a>
+  <a class="btn btn-primary" href={actionHref} target="_blank" rel="noopener">{actionLabel}</a>
 </article>

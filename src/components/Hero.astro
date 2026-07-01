@@ -1,5 +1,8 @@
 ---
 import HeroTvPreview from './HeroTvPreview.astro';
+import { landing } from '../data/landing.js';
+
+const { hero, trustBadges } = landing;
 ---
 <section class="hero section" id="home">
       <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
@@ -7,19 +10,19 @@ import HeroTvPreview from './HeroTvPreview.astro';
 
       <div class="container hero-grid">
         <div class="hero-content reveal">
-          <p class="eyebrow">vodgate.com</p>
-          <h1>VODGate - Premium IPTV &amp; VOD Services</h1>
-          <p class="hero-text">A clean, reliable Live TV &amp; VOD entertainment service made for modern homes and compatible with popular devices.</p>
+          <p class="eyebrow">{hero.eyebrow}</p>
+          <h1>{hero.heading}</h1>
+          <p class="hero-text">{hero.text}</p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/212642197277?text=Hello%20VODGate%2C%20I%20want%20to%20order%20an%20IPTV%20plan" target="_blank" rel="noopener">Order on WhatsApp</a>
-            <a class="btn btn-secondary" href="#pricing">View Plans</a>
+            <a class="btn btn-primary" href={hero.primaryAction.href} target="_blank" rel="noopener">{hero.primaryAction.label}</a>
+            <a class="btn btn-secondary" href={hero.secondaryAction.href}>{hero.secondaryAction.label}</a>
           </div>
 
-          <div class="trust-row" aria-label="Service highlights">
-            <span>Fast activation</span>
-            <span>4K ready</span>
-            <span>WhatsApp support</span>
+          <div class="trust-row" aria-label={hero.ariaLabel}>
+            {trustBadges.map((badge) => (
+              <span>{badge}</span>
+            ))}
           </div>
         </div>
 

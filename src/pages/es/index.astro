@@ -1,7 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LandingPage from '../../components/LandingPage.astro';
+import { markets } from '../../data/markets.js';
+
+const market = markets.find((market) => market.key === 'es');
 ---
-<BaseLayout lang="es" canonicalPath="/es/">
+<BaseLayout lang={market.lang} canonicalPath={market.canonicalPath}>
   <LandingPage />
 </BaseLayout>

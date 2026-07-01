@@ -54,3 +54,9 @@ export const markets = [
     canonicalPath: '/ar/',
   },
 ];
+
+const switcherMarketKeys = ['us', 'uk', 'es', 'fr', 'ar'];
+
+export const switcherMarkets = switcherMarketKeys.map((key) =>
+  markets.find((market) => market.key === key),
+);

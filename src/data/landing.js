@@ -18,6 +18,7 @@ export const landing = {
     eyebrow: 'vodgate.com',
     heading: 'VODGate - Premium IPTV & VOD Services',
     text: 'A clean, reliable Live TV & VOD entertainment service made for modern homes and compatible with popular devices.',
+    ariaLabel: 'Service highlights',
     primaryAction: {
       label: 'Order on WhatsApp',
       href: 'https://wa.me/212642197277?text=Hello%20VODGate%2C%20I%20want%20to%20order%20an%20IPTV%20plan',
